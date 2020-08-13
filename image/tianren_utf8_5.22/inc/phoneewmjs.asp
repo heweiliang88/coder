@@ -1,1 +1,0 @@
-<script type="text/javascript" src="<%=funpath%>js/qrcode.js"></script>
