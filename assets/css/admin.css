@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.label {
+    padding-right: 9px;
+    padding-left: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    font-size: 13px;
+}
+
+body {
+    background-color: rgb(243, 243, 243);
+}
+
+header {
+    margin-bottom: 70px;
+}
+
+.main-left {
+    height: 900px;
+    /* background-color: pink; */
+    color: black;
+}
+
+.main-left .navcollapse {
+    background-color: white;
+}
+
+.main-left .navcollapse li {
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.main-left .navcollapse a {}
+
+
+
+.main-right {
+    height: 900px;
+    /* border: 1px solid black; */
+}
+
+.mr-info i {
+    margin-right: 5px;
+}
+
+.mr-navigation a:hover,
+.mr-navigation a:link {
+    text-decoration: none;
+}
+
+
+.mr-server ul {
+    padding: 10px;
+}
+
+.mr-server .server-logo {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+
+.mr-server .title-icon i {
+    font-size: 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.mr-server h4 b {
+    height: 27px;
+    line-height: 27px;
+}
+
+
+
+.mr-server .list-group-item h5 input {
+    margin: 10px 5px 0px 0px;
+}
+
+
+.mr-server .statistics-table .panel-heading {
+    height: 50px;
+    line-height: 50px;
+}
+
+
+.row-style .breadcrumb {
+    background-color: white;
+}
+
+.bgc-white {
+    background-color: white;
+
+}
+
+.center-block {
+    display: flex;
+    justify-content: center;
+}

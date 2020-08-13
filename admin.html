@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/admin.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/Chart.min.js"></script>
+    <script src="./assets/js/utils.js"></script>
+    <script>
+        $(function () { $("[data-toggle='popover']").popover(); });
+        $(function () { $("[data-toggle='tooltip']").tooltip(); });
+        $('.collapse').collapse();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Coder后台管理页面</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">首页</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">设置 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">用户 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">内容 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                    管理员<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form navbar-left pull-right" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="请输入要搜索的内容">
+                            </div>
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </form>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="hidden-xs hidden-sm col-md-3 main-left">
+                    <!-- nav nav-pills nav-stacked nav nav-list nav-collapse main-left navcollapse-->
+                    <ul class="nav nav-pills nav-stacked navcollapse">
+                        <li class="active">
+                            <a class="active" href="admin.html">后台信息
+                                <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"> 日历
+                                <i class="glyphicon glyphicon-chevron-right pull-right"></i> </li>
+                        </a>
+                        <li>
+                            <a href="javascript:;">统计图表
+                                <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">表单
+                                <i class="glyphicon glyphicon-chevron-right pull-right"></i> </li>
+                        </a>
+                        <li>
+                            <a href="javascript:;">表格
+                                <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"> 按钮图标
+                                <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"> 编辑器
+                                <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"> UI界面
+                                <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="label label-primary pull-right">731</span> 订单</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="label label-success pull-right">812</span> 清单</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="label label-info pull-right">27</span> 客户</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="label label-info pull-right">1,234</span> 用户</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="label label-info pull-right">2,221</span> 消息</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="label label-info pull-right">11</span> 报告</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="label label-danger pull-right">83</span> 错误</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="label label-warning pull-right">4,231</span> 日志</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 main-right">
+                    <section class="mr-info">
+                        <div class="row">
+                            <div class="alert alert-success alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <i class="glyphicon glyphicon-user"></i>
+                                <strong>管理员</strong> 欢迎登陆后台的网站！！！
+                            </div>
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <i class="glyphicon glyphicon-alert"></i>
+                                <strong>警告</strong> 你的网站存在未知bug
+                            </div>
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <i class="glyphicon glyphicon-alert"></i>
+                                <strong>危险</strong> 你受到异常访问的流量
+                            </div>
+                        </div>
+                    </section>
+                    <section class="mr-navigation">
+                        <div class="row row-style">
+                            <ol class="breadcrumb">
+                                <li><a href="#">首页</a></li>
+                                <li><a href="#">设置</a></li>
+                                <li class="active">工具</li>
+                            </ol>
+                        </div>
+                    </section>
+                    <section class="mr-server">
+                        <div class="row">
+                            <div class="panel panel-default">
+                                <!-- Default panel contents -->
+                                <div class="panel-heading">
+                                    <h4>
+                                        <i class="glyphicon glyphicon-tasks server-logo"></i>服务器
+                                        <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                                    </h4>
+                                </div>
+                                <div class="panel-body">
+                                    <h4 class="pull-left">
+                                        服务器数量：12台
+                                        操作系统：
+                                    </h4>
+                                    <button type="button" class="btn btn-success pull-right">
+                                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                                        购买服务器</button>
+                                </div>
+                                <!-- List group -->
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <h4 class="title-icon">
+                                            <i class="glyphicon glyphicon-cloud" style="color: rgb(102, 102, 250);"></i>
+                                            服务器状态
+                                            <b class="systemtime pull-right"></b>
+                                        </h4>
+                                        <div>
+                                            <div id="canvas-holder" style="width:100%">
+                                                <canvas id="fircanvas"></canvas>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <button id="randomizeData" class="btn btn-primary">
+                                                <i class="glyphicon glyphicon-refresh"></i>
+                                                刷新数据变化</button>
+                                            <button id="addDataset" class="btn btn-success">添加自定义监控</button>
+                                            <button id="removeDataset" class="btn btn-danger">
+                                                删除自定义监控</button>
+                                            <button id="addData" class="btn btn-success">增加数据</button>
+                                            <button data-toggle="tooltip" data-placement="top" title="你必须超级是管理员才能执行这一权限"
+                                                id="removeData" class="btn btn-danger disabled">
+                                                <i class="glyphicon glyphicon-alert"></i>
+                                                清空数据</button>
+                                            <button class="btn btn-info">
+                                                <i class="glyphicon glyphicon-log-out"></i>
+                                                导出数据</button>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h4 class="title-icon">
+                                            <i class="glyphicon glyphicon-yen" style="color:rgb(245, 201, 4);"></i>
+                                            网站收入情况占比
+                                            <b class="systemtime pull-right"></b>
+                                        </h4>
+                                        <div>
+                                            <div style="width:100%;">
+                                                <canvas id="seccanvas"></canvas>
+                                            </div>
+                                            <button class="btn btn-primary" id="randomizeData2">
+                                                <i class="glyphicon glyphicon-refresh"></i>
+                                                刷新数据变化</button>
+                                            <button class="btn btn-success" id="addData2">增加数据</button>
+                                            <button class="btn btn-danger disabled" id="removeData2"
+                                                data-toggle="tooltip" data-placement="top" title="你必须超级是管理员才能执行这一权限">
+                                                <i class="glyphicon glyphicon-alert"></i>
+                                                删除数据</button>
+                                            <button class="btn btn-info">
+                                                <i class="glyphicon glyphicon-log-out"></i>
+                                                导出数据</button>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h4 class="title-icon">
+                                            <i class="glyphicon glyphicon-gift" style="color:rgb(228, 119, 134);"></i>
+                                            活动倒计时
+                                        </h4>
+                                        <h4>
+                                            <i class="glyphicon glyphicon-th-list" style="color: rgb(59, 60, 83);"></i>
+                                            已发布活动</h4>
+                                        <ul>
+                                            <li>
+                                                <h5>
+                                                    <input type="checkbox" name="" id="">
+                                                    1024 程序员节活动
+                                                    <span class="pull-right">参加人数：1090/1200人</span>
+                                                </h5>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-danger active"
+                                                        role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: 90%">
+                                                        <span>90%</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h5>
+                                                    <input type="checkbox" name="" id="">
+                                                    1111 程序员单身相亲活动
+                                                    <span class="pull-right">参加人数：1390/2100人</span>
+                                                </h5>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-warning active"
+                                                        role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: 75%">
+                                                        <span>75%</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h5>
+                                                    <input type="checkbox" name="" id="">
+                                                    1212 双十二程序员购书活动
+                                                    <span class="pull-right">参加人数：80/1000人</span>
+                                                </h5>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped active"
+                                                        role="progressbar" aria-valuenow="45" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: 45%">
+                                                        <span>10%</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <h4>
+                                            <i class="glyphicon glyphicon-th-list" style="color: rgb(59, 60, 83);"></i>
+                                            未发布活动</h4>
+                                        <ul>
+                                            <li>
+                                                <h5>
+                                                    <input type="checkbox" name="" id="">
+                                                    1010 Github线下交友会</h5>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped active"
+                                                        role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                                        aria-valuemax="100" style="width: 0%">
+                                                        <span class="sr-only">0</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <button type="button" data-toggle="modal" data-target="#addactive"
+                                            class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-plus-sign"></span>
+                                            添加活动</button>
+                                        <button type="button" class="btn btn-danger disabled" data-toggle="tooltip"
+                                            data-placement="bottom" title="你必须超级是管理员才能执行这一权限">
+                                            <i class="glyphicon glyphicon-alert"></i>
+                                            删除活动</button>
+                                        <button type="button" class="btn btn-info">发布活动</button>
+                                        <nav aria-label="Page navigation" class="center-block"
+                                            style="margin-top: 30px;">
+                                            <ul class="pagination pagination-lg">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </li>
+                                    <li class="list-group-item statistics-table">
+                                        <h4 class="title-icon">
+                                            <i class="glyphicon glyphicon-gift" style="color:rgb(228, 119, 134);"></i>
+                                            统计表格
+                                        </h4>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4>用户
+                                                            <span class="label label-primary pull-right">12312</span>
+                                                        </h4>
+                                                    </div>
+                                                    <table
+                                                        class="table table-hover table-striped table-bordered table-style">
+                                                        <thead>
+                                                            <tr class="success">
+                                                                <th>#</th>
+                                                                <th>名字</th>
+                                                                <th>昵称</th>
+                                                                <th>用户名</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>何小小</td>
+                                                                <td>齐天大仙</td>
+                                                                <td>000001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>何大仙</td>
+                                                                <td>一壶大河</td>
+                                                                <td>000002</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>何中中</td>
+                                                                <td>巴巴cc</td>
+                                                                <td>000003</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4>订单
+                                                            <span class="label label-primary pull-right">902</span>
+                                                        </h4>
+                                                    </div>
+                                                    <table
+                                                        class="table table-hover table-striped table-bordered table-style">
+                                                        <thead>
+                                                            <tr class="danger">
+                                                                <th>#</th>
+                                                                <th>产品名</th>
+                                                                <th>订单日期</th>
+                                                                <th>订单金额(元)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>何小小</td>
+                                                                <td>2020/6/7</td>
+                                                                <td>123.5</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>何大仙</td>
+                                                                <td>2020/6/7</td>
+                                                                <td>534.0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>何中中</td>
+                                                                <td>2020/6/7</td>
+                                                                <td>90.0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4>客户
+                                                            <span class="label label-primary pull-right">12</span>
+                                                        </h4>
+                                                    </div>
+                                                    <table
+                                                        class="table table-hover table-striped table-bordered table-style">
+                                                        <thead>
+                                                            <tr class="info">
+                                                                <th>#</th>
+                                                                <th>名字</th>
+                                                                <th>昵称</th>
+                                                                <th>用户名</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>何小小</td>
+                                                                <td>齐天大仙</td>
+                                                                <td>000001</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>何大仙</td>
+                                                                <td>一壶大河</td>
+                                                                <td>000002</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>何中中</td>
+                                                                <td>巴巴cc</td>
+                                                                <td>000003</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4>购物清单
+                                                            <span class="label label-primary pull-right">823</span>
+                                                        </h4>
+                                                    </div>
+                                                    <table
+                                                        class="table table-hover table-striped table-bordered table-style">
+                                                        <thead>
+                                                            <tr class="warning">
+                                                                <th>#</th>
+                                                                <th>日期</th>
+                                                                <th>金额(元)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>2020/6/7</td>
+                                                                <td>34.0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>2020/6/7</td>
+                                                                <td>34.0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>2020/6/7</td>
+                                                                <td>34.0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                                <td>...</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <nav aria-label="Page navigation" class="center-block"
+                                            style="margin-top: 30px;">
+                                            <ul class="pagination pagination-lg">
+                                                <li>
+                                                    <a href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li>
+                                                    <a href="#" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <h3>
+                                        <i class="glyphicon glyphicon-user"
+                                            style="color: gray; margin-right: 10px;"></i>
+                                        管理员：
+                                    </h3>
+                                    <ul>
+                                        <li>
+                                            <p class="bg-primary"> 你修改了......</p>
+                                        </li>
+                                        <li>
+                                            <p class="bg-warning"> 你修改了......</p>
+                                        </li>
+                                        <li>
+                                            <p class="bg-danger"> 你修改了......</p>
+                                        </li>
+                                        <li>
+                                            <p class="bg-info"> 你修改了......</p>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn btn-danger">确定修改</button>
+                                    <button type="button" class="btn btn-danger">恢复设置</button>
+                                    <button type="button" class="btn btn-primary">发布最新版本网站的内容</button>
+                                    <p class="text-center">1830315何伟亮</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- 
+添加活动模态框
+ -->
+        <div class="modal fade" id="addactive">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">添加活动</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="请输入要搜索的内容">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default">添加</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/js/admin.js"></script>
+</body>
+
+</html>

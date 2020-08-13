@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /inc/
+Disallow: /user/
+Disallow: /kindeditor_4.1.10/
+Disallow: /core/
+Disallow: /crinc/
+Disallow: /js/
+Disallow: /skin/

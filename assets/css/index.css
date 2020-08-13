@@ -1,0 +1,635 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+button:focus,
+button:active:focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button.active.focus {
+    outline: none;
+}
+
+/* 
+common
+*/
+
+.section-title {
+    padding: 40px 0px 20px 0px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed rgb(221, 221, 221);
+}
+
+
+/* header */
+header {}
+
+
+.navbar a {
+    color: white;
+    letter-spacing: 3px;
+}
+
+.navbar .navbar-collapse a:hover {
+    color: rgb(102, 102, 255);
+    transition: all 0.9s;
+    -webkit-transition: all 0.9s;
+    -moz-transition: all 0.9s;
+    -ms-transition: all 0.9s;
+    -o-transition: all 0.9s;
+}
+
+.navbar-header .logo:hover .icon2 {
+    animation: logokf 2s ease-out infinite;
+    -webkit-animation: logokf 2s ease-out infinite;
+}
+
+@keyframes logokf {
+    0% {
+        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
+        -moz-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        -o-transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(140px, 0px);
+        -webkit-transform: translate(140px, 0px);
+        -moz-transform: translate(140px, 0px);
+        -ms-transform: translate(140px, 0px);
+        -o-transform: translate(140px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
+        -moz-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        -o-transform: translate(0px, 0px);
+    }
+}
+
+.logo {
+    position: relative;
+}
+
+.icon2 {
+    position: absolute;
+    left: -170px;
+    z-index: 100;
+}
+
+.navbar .navbar-nav a:hover,
+.navbar .navbar-nav a:focus {
+    background-color: transparent;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar i {
+    padding-right: 3px;
+}
+
+/* 
+banner
+*/
+
+.banner {
+    width: 100%;
+    height: 600px;
+}
+
+.banner .container-fluid {
+    padding: 0px 0px;
+}
+
+.banner .container-fluid .carousel .carousel-inner img {
+    width: 100%;
+    height: 600px;
+}
+
+.carousel .carousel-inner code {
+    margin: 0px 10px;
+    line-height: 25px;
+}
+
+.carousel .carousel-inner .banner-btn {
+    display: inline-block;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 2px 2px gray;
+    outline: none;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    width: 150px;
+    background-image: none;
+}
+
+
+/* 
+section technology
+*/
+
+#technology {
+    height: 75px;
+    padding: 15px 0px;
+    background-color: #f7f8fa;
+}
+
+#technology .iconpot {
+    display: flex;
+    justify-content: center;
+}
+
+#technology svg {
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 75px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+#technology svg:hover {
+    font-size: 50px;
+}
+
+/* 
+section new
+*/
+.new {
+    height: 680px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.jumbotron {
+    height: 500px;
+    color: white !important;
+}
+
+.new-left-jumbotron {
+    width: 100%;
+    height: 500px;
+
+}
+
+.new-left-jumbotron h2 {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.new-left-jumbotron .btn-look {
+    margin-top: 50px;
+}
+
+.new-left-panel a:hover,
+.new-left-panel a:visited,
+.new-left-panel a:active,
+.new-left-panel a:link {
+    text-decoration: none;
+}
+
+
+#count {
+    height: 300px;
+    width: 100%;
+    background: url('../image/banner5.jpg');
+    background-attachment: fixed;
+    /* background-color: #f7f8fa; */
+}
+
+d .count-bg {
+    overflow: hidden;
+}
+
+.count .counters .num {
+    font-size: 30px;
+    display: block;
+    /* color: #414c64; */
+}
+
+.count .counters .pie {
+    margin: 20px auto 0px;
+}
+
+.codeleader {
+    height: 600px;
+    width: 100%;
+    background-color: white;
+}
+
+.codeleader h2 {
+    margin: 20px 0px;
+}
+
+.codeleader p {
+    font-size: 16px;
+}
+
+
+.codeleader {
+    width: 100%;
+    height: 600px;
+}
+
+.codeleader .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.codeleader .leader-card {
+    width: 360px;
+    height: 420px;
+    border: 1px solid rgb(223, 223, 223);
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 7px;
+    box-shadow: 5px 15px 10px rgb(218, 218, 218);
+    position: relative;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.codeleader .leader-card .circle-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    background-repeat: center center;
+    background-size: 100px 100px;
+    background-color: orange;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.circle-box1 {
+    background-image: url('../image/C.jpg');
+    background-position: -10px 3px;
+}
+
+.circle-box2 {
+    background-image: url('../image/java.jpg');
+    background-position: -8px 1px;
+}
+
+.circle-box3 {
+    background-image: url('../image/JavaScript.jpg');
+    background-position: -15px 1px;
+}
+
+.leader-card .description {
+    height: 200px;
+    color: rgb(170, 170, 170);
+    /* color: red; */
+}
+
+.leader-card .name {
+    font-size: 20px;
+    color: rgb(100, 100, 255);
+}
+
+.leader-card .createlanguage {
+    font-size: 25px;
+    color: rgb(250, 69, 69);
+}
+
+.leader-card .icon-add {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.codeleader .carousel-indicators {
+    position: static;
+    margin: 10px auto;
+}
+
+
+.codeleader-car-ind {
+    /* background-color: red; */
+}
+
+
+
+
+/* 
+section blog
+*/
+#blog {
+    width: 100%;
+    height: 1300px;
+}
+
+
+.contact .info {
+    width: 100%;
+    height: 380px;
+    background: white;
+}
+
+.contact .info i {
+    font-size: 32px;
+    color: rgb(102, 102, 255);
+    float: left;
+    line-height: 1;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #282828;
+}
+
+.contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #5b5b5b;
+}
+
+.contact .info .email,
+.contact .info .phone {
+    margin-top: 40px;
+}
+
+.contact .php-email-form {
+    width: 100%;
+    background: #fff;
+}
+
+.contact .php-email-form .form-group {
+    padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: rgb(102, 102, 255);
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid rgb(102, 102, 255);
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+    border-color: rgb(102, 102, 255);
+}
+
+.contact .php-email-form input {
+    height: 44px;
+}
+
+.contact .php-email-form textarea {
+    padding: 10px 12px;
+}
+
+.contact .php-email-form button[type="submit"] {
+    background: rgb(102, 102, 255);
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+    background: rgb(102, 102, 255);
+}
+
+
+
+footer {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    border-top: 1px solid rgb(219, 219, 219);
+    background-color: rgb(252, 251, 251);
+}
+
+footer ul {
+    display: flex;
+    font-size: 30px;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:768px) {
+    #technology {
+        width: 100%;
+        height: 500px;
+        line-height: 45px;
+    }
+
+    #technology a {
+        margin: 10px;
+
+    }
+
+    #technology .iconpot {
+        /* justify-content: start; */
+        border-bottom: 1px dashed gray;
+    }
+
+    #technology svg {
+        font-size: 50px;
+
+    }
+
+    .new {
+        height: 1100px;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    #count {
+        height: 800px;
+        width: 100%;
+        background: url(../image/banner5.jpg);
+        background-attachment: fixed;
+        color: white;
+    }
+
+    .codeleader {
+        width: 100%;
+        height: 710px;
+    }
+
+    .leader-card .description {
+        height: 400px;
+        color: rgb(170, 170, 170);
+    }
+
+    .codeleader .leader-card {
+        width: 100%;
+        height: 710px;
+    }
+
+    #contact {
+        width: 100%;
+        height: 850px;
+
+    }
+
+    .contact .info {
+        width: 100%;
+        height: 300px;
+        background: white;
+    }
+
+    #blog {
+        width: 100%;
+        height: 4200px;
+        margin-top: 200px;
+    }
+
+    footer {
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        border-top: 1px solid rgb(219, 219, 219);
+        background-color: rgb(252, 251, 251);
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:968px) {
+    #technology {
+        width: 100%;
+        height: 200px;
+        line-height: 45px;
+    }
+
+    #technology a {
+        margin: 10px;
+
+    }
+
+    #technology .iconpot {
+        /* justify-content: start; */
+        border-bottom: 1px dashed gray;
+    }
+
+    #technology svg {
+        font-size: 50px;
+
+    }
+
+    .new {
+        height: 1100px;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    #count {
+        height: 450px;
+        width: 100%;
+        background: url(../image/banner5.jpg);
+        background-attachment: fixed;
+        color: white;
+    }
+
+    .codeleader {
+        width: 100%;
+        height: 510px;
+    }
+
+    .leader-card .description {
+        height: 240px;
+        color: rgb(170, 170, 170);
+    }
+
+    .codeleader .leader-card {
+        width: 100%;
+        height: 510px;
+    }
+
+    #contact {
+        width: 100%;
+        height: 850px;
+    }
+
+    .contact .info {
+        width: 100%;
+        height: 300px;
+        background: white;
+    }
+
+    #blog {
+        width: 100%;
+        height: 2000px;
+        margin-top: 200px;
+    }
+
+}

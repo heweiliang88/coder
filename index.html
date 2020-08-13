@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coder</title>
+    <link href="./assets/image/favicon.png" rel="icon">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- 动画库 -->
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.compat.css">
+    <link rel="stylesheet" href="./assets/css/hover-min.css">
+    <link rel="stylesheet" href="./assets//css/jquery.running.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.running.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <!-- 字体文件 -->
+    <script src="./assets/js/iconfont.js"></script>
+    <script>
+        $(function () { $("[data-toggle='popover']").popover(); });
+        $(function () { $("[data-toggle='tooltip']").tooltip(); });
+        $('.collapse').collapse();
+    </script>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+    <header>
+        <section class="nav">
+            <div class="row">
+                <nav class="navbar navbar-fixed-top container-fluid conColor" role="navigation" id="navbar-example">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="logo">
+                            <svg class="pull-left" t="1590744002347" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="3549" width="50" height="50">
+                                <path
+                                    d="M927.744   0 0 0 0.512-72.704zM335.872 297.472a51.2 51.2 0 0 0-72.192 0L84.992 475.648a51.2 51.2 0 0 0 0 72.192l178.176 178.176a51.2 51.2 0 0 0 72.192-72.192L194.048 512l141.824-142.336a51.2 51.2 0 0 0 0-72.192zM578.048 286.208a51.2 51.2 0 0 0-66.048 30.208l-131.584 355.328a51.2 51.2 0 1 0 95.744 35.84l131.584-355.328a51.2 51.2 0 0 0-29.696-66.048z"
+                                    p-id="3550" fill="#1296db"></path>
+                            </svg>
+                            <svg class="pull-left icon2" t="1590744002347" class="" viewBox="0 0 1024 1024"
+                                version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3549" width="50" height="50">
+                                <path d="M927.744 475.648l-178.176-178.176a51.2 51.2 0 0 0-72.192 72.192L819.2 512l-142.336 142.336a51.2 51.2 0 1 0 72.192
+                            72.192l178.176-178.176a51.2 51.2" p-id="3550" fill="#1296db"></path>
+                            </svg>
+                        </span>
+                        <a class="navbar-brand" href="#" style="font-size: 28px;">
+                            <span style="color:#1296db;">C</span>oder
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="javascript:;">
+                                    <i class="glyphicon glyphicon-home" aria-hidden="true"></i>
+                                    首页
+                                </a></li>
+                            <li><a href="#new">新闻</a></li>
+                            <li><a href="#blog">博客</a></li>
+                            <li class="dropdown" id="dropdown">
+                                <a href="#language" class="dropdown-toggle" data-toggle="dropdown" id="hideshow">编程语言<b
+                                        class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" id="dropdown-menu">
+                                    <li><a href="#">JavaScript</a></li>
+                                    <li><a href="#">Java</a></li>
+                                    <li><a href="#">C && C++ && C#</a></li>
+                                    <li><a href="#">Python</a></li>
+                                    <li><a href="#">Go</a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#contact">联系我们</a></li>
+                            <li data-toggle="modal" data-target="#newbox"><a>
+                                    <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+                                    消息
+                                    <span class="label label-danger">6</span>
+                                </a></li>
+                            <li>
+                                <a href="./login.html">
+                                    <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+                                    登陆/注册</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <!-- newbox 模态框 -->
+        <div class="modal fade" id="newbox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">消息</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info">
+                            <a href="#" class="glyphicon glyphicon-flag" data-dismiss="alert">
+                                <!-- &times; -->
+                            </a>
+                            官方活动通知：1024日本站随机抽取10名幸运儿送出价值588元的键盘</div>
+                        <div class="alert alert-warning">
+                            <a href="#" class="close" data-dismiss="alert">
+                                &times;
+                            </a>
+                            <i class="glyphicon glyphicon-flash"></i>
+                            你的网络不安全！！！</div>
+                        <div class="alert alert-danger">
+                            <i class="glyphicon glyphicon-flash"></i>
+                            <a href="#" class="close" data-dismiss="alert">
+                                &times;
+                            </a>
+                            你没有完善资料！！！
+                        </div>
+                        <div class="alert alert-success">
+                            <a href="#" class="close" data-dismiss="alert">
+                                &times;
+                            </a>
+                            <i class="glyphicon glyphicon-tags"></i>
+                            坚持每天打卡
+                            <button type="button" class="btn btn-primary glyphicon glyphicon-check pull-right"
+                                style="margin-right: 10px;">打卡</button>
+                        </div>
+                        <div class="alert alert-success">
+                            <a href="#" class="close" data-dismiss="alert">
+                                &times;
+                            </a>
+                            <i class="glyphicon glyphicon-tags"></i>
+                            你的文章获得5234的阅读量</div>
+                        <div class="alert alert-success">
+                            <a href="#" class="close" data-dismiss="alert">
+                                &times;
+                            </a>
+                            <i class="glyphicon glyphicon-tags"></i>
+                            你的粉丝数量+309</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal">
+                        </button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            <i class="glyphicon glyphicon-repeat"></i>
+                            <!--  -->
+                            刷新</button>
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            全部已读
+                    </div>
+                    <!-- glyphicon glyphicon-trash -->
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <section class="banner">
+            <div class="container-fluid">
+                <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-id" data-slide-to="0" class=""></li>
+                        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+                        <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item  active">
+                            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide"
+                                src="./assets/image/banner.jpg">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1 class="animate__animated animate__wobble">走进编程的世界</h1>
+                                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                                        porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
+                                        elit.
+                                    </p>
+                                    <p><button type="button" class="btn btn-lg btn-primary banner-btn"
+                                            data-toggle="modal" data-target="#enter" role="button">进入</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide"
+                                src="./assets/image/banner2.jpg">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1 class="animate__animated animate__flip">Hello World!!!</h1>
+                                    <p>
+                                    <h3></h3>
+                                    <code>System.out.println("Hello,World!"); </code>
+                                    <code>printf("Hello,World!"); </code>
+                                    <code>print("Hello,World!")</code><br />
+                                    <code> sys.puts("Hello,World!");</code>
+                                    <code>echo "Hello,World!"; </code><br />
+                                    <code>MsgBox("Hello,World!")</code>
+                                    <p><button class="btn btn-lg btn-primary hvr-grow-shadow banner-btn" role="button"
+                                            data-toggle="modal" data-target="#helloworld">
+                                            <i class="glyphicon glyphicon-off"></i>
+                                            输出Hello world!!!</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide"
+                                src="./assets/image/banner3.jpg">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1 class="animate__animated animate__rubberBand">拒绝996
+                                        <i class="glyphicon glyphicon-plus"></i>
+                                    </h1>
+                                    <p>996工作制是一种违反《中华人民共和国劳动法》的延长法定工作时间的工作制度，指的是早上9点上班、晚上9点下班，中午和傍晚休息1小时（或不到），总计工作10小时以上，并且一周工作6天的工作制度，代表着中国互联网企业盛行的加班文化
+                                    </p>
+                                    <p id="statnumber">
+                                        <button type="button"
+                                            class="btn btn-lg btn-primary hvr-curl-top-left banner-btn" role="button"
+                                            title="欢迎你加入，拒绝996工作制阵营" data-container="body" data-toggle="popover"
+                                            data-placement="left" data-content="面对拒绝996工作制从我做起！！！">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                            赞成:<b>130348</b>人</button>
+                                        <!-- animate__animated animate__bounceOutDown -->
+                                        <button type="button" class="btn btn-lg btn-info banner-btn" role="button">
+                                            <i class="glyphicon glyphicon-glass"></i>
+                                            中立:<b>6292</b>人</button>
+                                        <button type="button"
+                                            class="btn btn-lg btn-danger  hvr-curl-top-right banner-btn" role="button"
+                                            title="Popover title" data-container="body" data-toggle="popover"
+                                            data-placement="right" data-content="右侧的 Popover 中的一些内容">
+                                            <i class="glyphicon glyphicon-remove"></i>
+                                            同意:<b>3452</b>人</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span
+                            class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a class="right carousel-control" href="#carousel-id" data-slide="next"><span
+                            class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+        </section>
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="enter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">你好，编程世界</h4>
+                    </div>
+                    <div class="modal-body">在这里添加一些文本</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">提交更改</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <div class="modal fade" id="helloworld" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">你好，编程世界</h4>
+                    </div>
+                    <div class="modal-body">
+                        <option value="">
+                        </option>
+                        <input type="text" placeholder="请输入内容！！！">
+                        <code>
+                        </code>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">输出</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+    </header>
+    <main class="main">
+        <section class="technology" id="technology">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 iconpot">
+                        <a href="#" class="tooltip-test" data-toggle="tooltip" data-placement="bottom" title="舔砖Java">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#iconjava1"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 iconpot">
+                        <a href="#" class="tooltip-test" data-toggle="tooltip" data-placement="bottom" title="起源于我">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#iconc"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 iconpot">
+                        <a href="#" class="tooltip-test" data-toggle="tooltip" data-placement="bottom"
+                            title="人生苦短,我用Python">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#iconpython"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 iconpot">
+                        <a href="#" class="tooltip-test" data-toggle="tooltip" data-placement="bottom" title="万能JS">
+                            <svg class="icon text-center" aria-hidden="true">
+                                <use xlink:href="#iconJavaScript"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 iconpot">
+                        <a href="#" class="tooltip-test" data-toggle="tooltip" data-placement="bottom"
+                            title="易用、灵活、高效、从不过时">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#iconvue"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 iconpot">
+                        <a href="#" class="tooltip-test" data-toggle="tooltip" data-placement="bottom" title="php是世界最好的编程语言">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#iconphp"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="new" id="new">
+            <div class="container">
+                <h2 class="text-center section-title">
+                    新闻</h2>
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs  column new-left-jumbotron">
+                        <div class="jumbotron">
+                            <embed src="./assets/fonts/new.svg" type="image/svg+xml" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs column new-left-panel">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                            2020年对一名合格的程序员有哪些要求？
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        1、熟练基本语法<br>
+                                        2、掌握高级特性<br>
+                                        3、使用第三方库<br>
+                                        4、了解专业知识<br>
+                                        5、能够传授他人<br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                            中国的程序员35岁后何去何从!!!
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        虽然大佬们都不承认，互联网蓝领们要认清事 实:一旦过了四十岁，你的技能将会迅速贬 值，执行力和创造力也都将比不上年轻人。如
+                                        果没能积累起影响力与人脉，职业前途将会骤 然暗淡。也就是说，实际上你的工作性质，跟 足球运动员是一-样的，四十岁也就该挂手挂 脑，光荣退役了。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                            程序员去摆地摊？还是别痴心妄想了
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        一线城市的程序员天天 996 ，哪有时间摆地摊啊？也没有时间逛地摊。还不如开滴滴接送 996 下班的程序员打车回家挣钱呢。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                            2020年程序员是否过剩了
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        首先，从IT互联网行业的发展趋势和整个社会的发展趋势来看，未来程序员的人才需求量会进一步扩大，但是在当前消费互联网逐渐进入到存量时代之后，整个IT互联网行业都处在一个变革期，此时在人才需求方面会出现一系列变化，掌握新技术的高端应用型人才和研发型人才将获得更多的发展机会，而普通应用级程序员将面临较大的职场压力。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                                            “程序员是新时代的纺织工人”，这个观点你认同吗？
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        对于程序员的称呼，最常见的一个词就是码农，不过从字面意思上去理解，这也不算是什么好词，比如程序员去相亲绝对不会说自己是码农，可能会说自己什么是工程师，程序员之类的，不过，平时的话，大家对码农一词已经习惯了，对此不以为然。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                                            无代码来了，还要程序员吗？
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseSix" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        从 Code 到 No Code，IT
+                                        界对简化代码开发的需求由来已久：过去数十年的发展历程中，在企业应用程序开发上，我们研发出工作流、智能业务流程管理系统、低代码/无代码、还有高生产力应用程序平台等应用开发形式。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                                            又是一位大神！带着电脑跑外卖 95后程序员一边送外卖一边改代码
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseSeven" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        在安徽合肥一个小区门口，一位年轻的饿了么蓝骑士从身后的双肩包里拿出了一台笔记本电脑，开始熟练地写起了代码。他叫张贤建，一位95后程序员，现在兼职做骑手。在送外卖的同时，继续坚持写代码，有时候有一些临时的需求，他就坐在公园、小区路边改。张贤建做程序员的工作月入两万，而对于外卖员的工作，他的回答是：“办公室坐太久了，需要透透气，体验体验生活。”
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="count" id="count">
+            <div class="count-bg">
+                <div class="container">
+                    <h2 class="text-center section-title">
+                        为世界上最好的编程语言投票！！！</h2>
+                    <div class="row">
+                        <div class="col-md-2 col-sm-6 col-xs-12 counters text-center testbox">
+                            <h3>C</h3>
+                            <span data-toggle="counter-up" class="animateNum num" data-animatetarget="6830"></span>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-12 counters text-center">
+                            <h3>Java</h3>
+                            <span data-toggle="counter-up" class="animateNum num" data-animatetarget="12393"></span>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-12 counters text-center">
+                            <h3>Python</h3>
+                            <span data-toggle="counter-up" class="animateNum num" data-animatetarget="9123"></span>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-12 counters text-center">
+                            <h3>C++</h3>
+                            <span data-toggle="counter-up" class="animateNum num" data-animatetarget="10123"></span>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-12 counters text-center">
+                            <h3>C#</h3>
+                            <span data-toggle="counter-up" class="animateNum num" data-animatetarget="9237"></span>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-12 counters text-center">
+                            <h3>Visual Basic</h3>
+                            <span data-toggle="counter-up" class="animateNum num" data-animatetarget="7093"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="codeleader" id="coderleader">
+            <h2 class="text-center section-title">编程语言</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 leader-card  wow bounceInUp">
+                        <p class="description">
+                            生于美国纽约州布朗克斯维尔，著名的美国计算机科学家，对C语言和其他编程语言、Multics和Unix等操作系统的发展做出了巨大贡献。在技术讨论中，他常被称为dmr，这是他在贝尔实验室的用户名称（username）
+                        </p>
+                        <p class="name">Dennis MacAlistair Ritchie </p>
+                        <p class="createlanguage">C语言创始人</p>
+                        <div class="circle-box circle-box1">
+                            <i class="glyphicon glyphicon-plus-sign icon-add"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-4 leader-card  wow bounceInUp">
+                        <p class="description">
+                            詹姆斯·高斯林，1990年，与Patrick
+                            Naughton和Mike Sheridan等人合作“绿色计划”，后来发展一套语言叫做“Oak”，后改名为Java。1994年底，James
+                            Gosling在硅谷召开的“技术、教育和设计大会”上展示Java程式。2000年，Java成为世界上最流行的电脑语言。
+                        </p>
+                        <p class="name">James
+                            Gosling </p>
+                        <p class="createlanguage">Java语言创始人</p>
+                        <div class="circle-box circle-box2">
+                            <i class="glyphicon glyphicon-plus-sign icon-add"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-4 leader-card  wow bounceInUp">
+                        <p class="description">
+                            布兰登·艾克，毕业后进入SGI工作，在此工作七年，主要负责操作系统与网络功能。之后他至MicroUnity工作了三年。
+                            1995年4月4日，任职于网景期间，为网景浏览器开发出JavaScript，之后成为浏览器上应用最广泛的脚本语言之一。
+                        </p>
+                        <p class="name">Brendan Eich </p>
+                        <p class="createlanguage">Javascript语言创始人</p>
+                        <div class="circle-box circle-box3">
+                            <i class="glyphicon glyphicon-plus-sign icon-add"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="blog" id="blog">
+            <div class="container">
+                <div class="row clearfix">
+                    <h2 class="text-center section-title">博客</h2>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12 wow bounceInLeft" data-wow-delay="0.3s">
+                            <div class="thumbnail">
+                                <img alt="300x200" src="./assets/image/section-blog01.png" />
+                                <div class="caption">
+                                    <h3>
+                                        程序员招聘
+                                    </h3>
+                                    <p>
+                                        1024程序员节是广大程序员的共同节日。1024是2的十次方，二进制计数的基本计量单位之一。针对程序员经常周末加班与工作日熬夜的情
+                                    </p>
+                                    <p>
+                                        <a class="btn btn-primary" href="#">订阅</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 wow bounceInUp" data-wow-delay="0.5s">
+                            <div class="thumbnail">
+                                <img alt="300x200" src="./assets/image/section-blog02.png" />
+                                <div class="caption">
+                                    <h3>
+                                        1024程序员节
+                                    </h3>
+                                    <p>
+                                        1024程序员节是广大程序员的共同节日。1024是2的十次方，二进制计数的基本计量单位之一。针对程序员经常周末加班与工作日熬夜的情。
+                                    </p>
+                                    <p>
+                                        <a class="btn btn-primary" href="#">订阅</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 wow bounceInRight" data-wow-delay="0.3s">
+                            <div class="thumbnail">
+                                <img alt="300x200" src="./assets/image/section-blog03.png" />
+                                <div class="caption">
+                                    <h3>
+                                        程序员交流园
+                                    </h3>
+                                    <p>
+                                        1024程序员节是广大程序员的共同节日。1024是2的十次方，二进制计数的基本计量单位之一。针对程序员经常周末加班与工作日熬夜的情
+                                    </p>
+                                    <p>
+                                        <a class="btn btn-primary" href="#">订阅</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 wow slideInLeft">
+                            <div class="thumbnail">
+                                <img alt="300x200" src="./assets/image/section-blog04.png" />
+                                <div class="caption">
+                                    <h3>
+                                        提高工作效率的开发工具
+                                    </h3>
+                                    <p>
+                                        1024程序员节是广大程序员的共同节日。1024是2的十次方，二进制计数的基本计量单位之一。针对程序员经常周末加班与工作日熬夜的情
+                                    </p>
+                                    <p>
+                                        <a class="btn btn-primary" href="#">订阅</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 wow bounceInUp">
+                            <div class="thumbnail">
+                                <img alt="300x200" src="./assets/image/section-blog05.png" />
+                                <div class="caption">
+                                    <h3>
+                                        bug在线求助
+                                    </h3>
+                                    <p>
+                                        1024程序员节是广大程序员的共同节日。1024是2的十次方，二进制计数的基本计量单位之一。针对程序员经常周末加班与工作日熬夜的情
+                                    </p>
+                                    <p>
+                                        <a class="btn btn-primary" href="#">订阅</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 wow slideInRight">
+                            <div class="thumbnail">
+                                <img alt="300x200" src="./assets/image/section-blog06.png" />
+                                <div class="caption">
+                                    <h3>
+                                        对产品经理的吐槽
+                                    </h3>
+                                    <p>
+                                        1024程序员节是广大程序员的共同节日。1024是2的十次方，二进制计数的基本计量单位之一。针对程序员经常周末加班与工作日熬夜的情
+                                    </p>
+                                    <p>
+                                        <a class="btn btn-primary" href="#">订阅</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row"> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class class="container">
+                <h2 class="text-center section-title">联系我们</h2>
+            </div>
+            <div>
+                <!-- <iframe style="border:0; width: 100%; height: 350px;" src="" frameborder="0" allowfullscreen></iframe> -->
+            </div>
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="ri-map-pin-line"></i>
+                                <h4>地址:</h4>
+                                <p>中国广东</p>
+                            </div>
+                            <div class="email">
+                                <i class="ri-mail-line"></i>
+                                <h4>电子邮箱:</h4>
+                                <p>info@163.com</p>
+                            </div>
+                            <div class="phone">
+                                <i class="ri-phone-line"></i>
+                                <h4>电话:</h4>
+                                <p>+1 9589 55488 55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="form-row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="你的名字"
+                                        data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="你的邮箱"
+                                        data-rule="email" data-msg="Please enter a valid email" />
+                                    <div class="validate"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="标题"
+                                    data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                                    data-msg="Please write something for us" placeholder="信息"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">提交信息</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <p class="text-center">1830315何伟亮</p>
+                <ul>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#iconGitHub"></use>
+                        </svg></li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#iconTwitter"></use>
+                        </svg></li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#iconstackoverflow
+                        "></use>
+                        </svg></li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icongoogle1"></use>
+                        </svg></li>
+                    <li>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#iconapiblueprint
+                        "></use>
+                        </svg></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script>
+        $(function () {
+            $("#identifier").carousel('pause');
+        })
+    </script>
+</body>
+
+</html>
